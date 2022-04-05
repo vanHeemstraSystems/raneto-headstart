@@ -5,6 +5,10 @@ Markdown powered Knowledgebase for Nodejs
 
 Raneto is an open source Knowledgebase platform that uses static Markdown files to power your Knowledgebase.
 
+Based on "Renato" at https://renato.com
+
+Based on "Renato on Docker Hub" at https://hub.docker.com/r/linuxserver/raneto
+
 ## 100 - Introduction
 
 See [README.md](./100/README.md)
