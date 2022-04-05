@@ -7,7 +7,9 @@ Raneto is an open source Knowledgebase platform that uses static Markdown files 
 
 Based on "Renato" at https://renato.com
 
-Based on "Renato on Docker Hub" at https://hub.docker.com/r/linuxserver/raneto
+Based on "Renato on Docker Hub" at https://hub.docker.com/r/linuxserver/raneto == Causes errors ==
+
+Based on "Knowledgebase in a Docker container using Raneto" at https://github.com/appsecco/raneto-docker
 
 Based on "Dockerizing a React App" at https://mherman.org/blog/dockerizing-a-react-app/
 
