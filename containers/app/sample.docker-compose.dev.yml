@@ -1,0 +1,64 @@
+version: "3.7"
+
+# See https://stackoverflow.com/questions/29261811/use-docker-compose-env-variable-in-dockerbuild-file
+services:
+
+  # webui:
+  #   build:
+  #     context: ./webui
+  #     network: host
+  #     dockerfile: Dockerfile.dev
+  #     args: # from env_file
+  #       UNIQUE_NAMESPACE: ${UNIQUE_NAMESPACE}
+  #       IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+  #       PROXY_USER: ${PROXY_USER}
+  #       PROXY_PASSWORD: ${PROXY_PASSWORD}
+  #       PROXY_FQDN: ${PROXY_FQDN}
+  #       PROXY_PORT: ${PROXY_PORT}
+  #       NODE_ENV: development
+  #   env_file:
+  #     - .env
+  #   container_name: ${UNIQUE_NAMESPACE}-webui-dev
+  #   security_opt:
+  #     - no-new-privileges:true    
+  #   ports:
+  #     - "8080:3000"
+  #   volumes:
+  #     - ./webui:/app
+  #     - /app/node_modules
+  #   environment:
+  #     - CHOKIDAR_USEPULLING=true     
+
+  raneto:
+    build:
+      context: ./raneto
+      dockerfile: Dockerfile.dev
+      args: # from env_file
+        UNIQUE_NAMESPACE: ${UNIQUE_NAMESPACE}
+        IMAGE_REPOSITORY: ${IMAGE_REPOSITORY}
+        PROXY_USER: ${PROXY_USER}
+        PROXY_PASSWORD: ${PROXY_PASSWORD}
+        PROXY_FQDN: ${PROXY_FQDN}
+        PROXY_PORT: ${PROXY_PORT}
+    env_file:
+      - .env
+    container_name: ${UNIQUE_NAMESPACE}-raneto-dev 
+    privileged: true
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped  
+    ports:
+      - "6001:3000"
+    volumes:
+      - ./raneto:/app
+      - ./raneto/config/config.default.js:/opt/raneto/example/config.default.js
+      - ./raneto/content/:/data/content/
+      - /app/node_modules
+    networks:
+      - gateway-dev
+
+# see https://stackoverflow.com/questions/45255066/create-networks-automatically-in-docker-compose
+networks:
+  gateway-dev:
+    external: true
+    name: gateway-dev            
