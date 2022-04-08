@@ -13,6 +13,9 @@ Based on "Dockerizing a React App" at https://mherman.org/blog/dockerizing-a-rea
 
 See also "How Raneto helped canUmeet knowledge base creation!" at https://medium.com/@canumeet/how-raneto-helped-canumeet-knowledge-base-creation-7b77aae9fdc5
 
+***TIP***: Use multiple instances , one for each “knowledge base specialization” (e.g., DevOps, Architecture, Programming), ![image](https://user-images.githubusercontent.com/1499433/162425165-d0003f2d-6df1-4d07-97f3-fff6b40bfbdf.png),
+see "Configuring Multiple Instances in Raneto" at https://collection.code.blog/2018/11/30/configuring-multiple-instances-in-raneto/
+
 ![Combine Periodic Table with Raneto](https://user-images.githubusercontent.com/1499433/162412091-f63c9534-59cf-4fcb-b28c-9ad75f253c83.png)
 
 ## 100 - Introduction
