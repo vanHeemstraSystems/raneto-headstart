@@ -16,11 +16,7 @@ See also "How Raneto helped canUmeet knowledge base creation!" at https://medium
 ***TIP***: Use multiple instances , one for each “knowledge base specialization” (e.g., DevOps, Architecture, Programming), 
 see "Configuring Multiple Instances in Raneto" at https://collection.code.blog/2018/11/30/configuring-multiple-instances-in-raneto/
 
-![image](https://user-images.githubusercontent.com/1499433/162425165-d0003f2d-6df1-4d07-97f3-fff6b40bfbdf.png)
-
-![Combine Periodic Table with Raneto](https://user-images.githubusercontent.com/1499433/162412091-f63c9534-59cf-4fcb-b28c-9ad75f253c83.png)
-
-![image](https://user-images.githubusercontent.com/1499433/162425432-49eb647a-7be9-4579-abd7-088b29ecc087.png)
+![Combine Periodic Table with Raneto](https://user-images.githubusercontent.com/1499433/162425764-d69e29dd-dc1f-47ad-87e7-b7c830a3fc71.png)
 
 Based on "Periodic Table for DevOps" at https://digital.ai/periodic-table-of-devops-tools
 
