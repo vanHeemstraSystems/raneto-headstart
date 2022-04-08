@@ -20,7 +20,7 @@ see "Configuring Multiple Instances in Raneto" at https://collection.code.blog/2
 
 Based on "Periodic Table for DevOps" at https://digital.ai/periodic-table-of-devops-tools
 
-
+![Periodic Table for DevOps](https://user-images.githubusercontent.com/1499433/162426126-29cce62a-f504-4d5b-b645-3404b9370359.png)
 
 ## 100 - Introduction
 
