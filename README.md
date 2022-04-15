@@ -24,6 +24,8 @@ Based on "Periodic Table for DevOps" at https://digital.ai/periodic-table-of-dev
 
 For creating the Periodic Table look at [Peter Beard's Periodic Videos](https://github.com/PeterBeard/periodic-videos) as demonstrated at http://www.periodicvideos.com/index.htm
 
+For styling of the Periodic Table have a look at https://codepen.io/mikegolus/pen/OwrPgB
+
 ## 100 - Introduction
 
 See [README.md](./100/README.md)
