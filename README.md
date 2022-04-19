@@ -26,6 +26,8 @@ For creating the Periodic Table look at [Peter Beard's Periodic Videos](https://
 
 For styling of the Periodic Table have a look at https://codepen.io/mikegolus/pen/OwrPgB
 
+The categories of Information Technology have been based "Information Technology" at https://simplicable.com/new/information-technology
+
 ## 100 - Introduction
 
 See [README.md](./100/README.md)
