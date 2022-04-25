@@ -50,9 +50,10 @@ services:
     ports:
       - "6001:3000"
     volumes:
-      - ./raneto:/app
-      - ./raneto/config/config.default.js:/opt/raneto/example/config.default.js
+      # - ./raneto:/app REMOVE
+      - ./raneto/config/config.custom.js:/opt/raneto/example/config.custom.js
       - ./raneto/content/:/data/content/
+      # - ./raneto/themes/custom:/opt/raneto/themes/custom  REMOVE
       - /app/node_modules
     networks:
       - gateway-dev
