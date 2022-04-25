@@ -30,4 +30,6 @@ prod.config.js
 
 /nginx/nginx.conf
 /config/config.default.js
-server.js
+/example/multiple-instances.js
+/themes/custom/public/scripts/urls.json
+/themes/custom/public/scripts/elements.json
