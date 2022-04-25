@@ -1,0 +1,709 @@
+/* Based on https://github.com/PeterBeard/periodic-videos/blob/master/style.css */
+#periodic-table-details {
+    position: absolute;
+    width: 680px;
+    height: 60px;
+    padding: 0 10px 10px;
+    left: 50%;
+    top: 0;
+    margin-left: -495px;
+}
+#periodic-table-details h1 {
+    margin: 25px 0 20px;
+    font-size: 20px;
+    color: #DDD;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400;
+}
+#periodic-table-details p {
+    margin: 0;
+}
+#periodic-table-details .discovery {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75em;
+}
+#periodic-table-details ul {
+    color: rgba(255, 255, 255, 0.7);
+    float: left;
+    list-style: none;
+    margin-top: 1em;
+    padding: 0;
+}
+#periodic-table-details ul li {
+    line-height: 1.75em;
+}
+#periodic-table-details em {
+    font-style: normal;
+    font-weight: bold;
+}
+#periodic-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1260px;
+    padding-bottom: 1em;
+}
+#periodic-table tr {
+    margin: 0;
+    padding: 0;
+}
+#lanthanides, #actinides {
+    position: relative;
+    top: 1em;
+}
+#periodic-table td {
+    background: #333 none;
+    margin: 0;
+    padding: 0;
+    min-width: 70px;
+    max-width: 70px;
+    height: 90px;
+    overflow: hidden;
+    text-align: center;
+    position:relative;
+    top: 0;
+    transition: top 0.1s;
+}
+#periodic-table td:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    background: #fff none;
+    color: #212121;
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+    z-index: 998;
+}
+#periodic-table td.blank {
+    background: none;
+}
+#periodic-table td.blank:hover {
+    top: 0;
+    box-shadow: none;
+    cursor: inherit;
+}
+
+.name {
+    display: block;
+    font-size: 0.75em;
+}
+.atomic-number {
+    display: block;
+}
+.symbol {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+.mass {
+    display: block;
+    font-size: 0.75em;
+}
+
+/* Colors for different categories of elements */
+/* Based on https://www.w3.org/wiki/CSS/Properties/color/keywords */
+
+#periodic-table .aliceblue {
+    background: #f0f8ff none;
+    color: #212121;
+}
+#periodic-table .antiquewhite {
+    background: #faebd7 none;
+    color: #212121;
+}
+#periodic-table .aqua {
+    background: #00ffff none;
+    color: #212121;
+}
+#periodic-table .aquamarine {
+    background: #7fffd4 none;
+    color: #212121;
+}
+#periodic-table .azure {
+    background: #f0ffff none;
+    color: #212121;
+}
+#periodic-table .beige {
+    background: #f5f5dc none;
+    color: #212121;
+}
+#periodic-table .bisque {
+    background: #ffe4c4 none;
+    color: #212121;
+}
+#periodic-table .black {
+    background: #000000 none;
+    color: #212121;
+}
+#periodic-table .blanchedalmond {
+    background: #ffebcd none;
+    color: #212121;
+}
+#periodic-table .blue {
+    background: #0000ff none;
+    color: #212121;
+}
+#periodic-table .blueviolet {
+    background: #8a2be2 none;
+    color: #212121;
+}
+#periodic-table .brown {
+    background: #a52a2a none;
+    color: #212121;
+}
+#periodic-table .burlywood {
+    background: #deb887 none;
+    color: #212121;
+}
+#periodic-table .cadetblue {
+    background: #5f9ea0 none;
+    color: #212121;
+}
+#periodic-table .chartreuse {
+    background: #7fff00 none;
+    color: #212121;
+}
+#periodic-table .chocolate {
+    background: #d2691e none;
+    color: #212121;
+}
+#periodic-table .coral {
+    background: #ff7f50 none;
+    color: #212121;
+}
+#periodic-table .cornflowerblue {
+    background: #6495ed none;
+    color: #212121;
+}
+#periodic-table .cornsilk {
+    background: #fff8dc none;
+    color: #212121;
+}
+#periodic-table .crimson {
+    background: #dc143c none;
+    color: #212121;
+}
+#periodic-table .cyan {
+    background: #00ffff none;
+    color: #212121;
+}
+#periodic-table .darkblue {
+    background: #00008b none;
+    color: #212121;
+}
+#periodic-table .darkcyan {
+    background: #008b8b none;
+    color: #212121;
+}
+#periodic-table .darkgoldenrod {
+    background: #b8860b none;
+    color: #212121;
+}
+#periodic-table .darkgray {
+    background: #a9a9a9 none;
+    color: #212121;
+}
+#periodic-table .darkgreen {
+    background: #006400 none;
+    color: #212121;
+}
+#periodic-table .darkgrey {
+    background: #a9a9a9 none;
+    color: #212121;
+}
+#periodic-table .darkkhaki {
+    background: #bdb76b none;
+    color: #212121;
+}
+#periodic-table .darkmagenta {
+    background: #8b008b none;
+    color: #212121;
+}
+#periodic-table .darkolivegreen {
+    background: #556b2f none;
+    color: #212121;
+}
+#periodic-table .darkorange {
+    background: #ff8c00 none;
+    color: #212121;
+}
+#periodic-table .darkorchid {
+    background: #9932cc none;
+    color: #212121;
+}
+#periodic-table .darkred {
+    background: #8b0000 none;
+    color: #212121;
+}
+#periodic-table .darksalmon {
+    background: #e9967a none;
+    color: #212121;
+}
+#periodic-table .darkseagreen {
+    background: #8fbc8f none;
+    color: #212121;
+}
+#periodic-table .darkslateblue {
+    background: #483d8b none;
+    color: #212121;
+}
+#periodic-table .darkslategray {
+    background: #2f4f4f none;
+    color: #212121;
+}
+#periodic-table .darkslategrey {
+    background: #2f4f4f none;
+    color: #212121;
+}
+#periodic-table .darkturquoise {
+    background: #00ced1 none;
+    color: #212121;
+}
+#periodic-table .darkviolet {
+    background: #9400d3 none;
+    color: #212121;
+}
+#periodic-table .deeppink {
+    background: #ff1493 none;
+    color: #212121;
+}
+#periodic-table .deepskyblue {
+    background: #00bfff none;
+    color: #212121;
+}
+#periodic-table .dimgray {
+    background: #696969 none;
+    color: #212121;
+}
+#periodic-table .dimgrey {
+    background: #696969 none;
+    color: #212121;
+}
+#periodic-table .dodgerblue {
+    background: #1e90ff none;
+    color: #212121;
+}
+#periodic-table .firebrick {
+    background: #b22222 none;
+    color: #212121;
+}
+#periodic-table .floralwhite {
+    background: #fffaf0 none;
+    color: #212121;
+}
+#periodic-table .forestgreen {
+    background: #228b22 none;
+    color: #212121;
+}
+#periodic-table .fuchsia {
+    background: #ff00ff none;
+    color: #212121;
+}
+#periodic-table .gainsboro {
+    background: #dcdcdc none;
+    color: #212121;
+}
+#periodic-table .ghostwhite {
+    background: #f8f8ff none;
+    color: #212121;
+}
+#periodic-table .gold {
+    background: #ffd700 none;
+    color: #212121;
+}
+#periodic-table .goldenrod {
+    background: #daa520 none;
+    color: #212121;
+}
+#periodic-table .gray {
+    background: #808080 none;
+    color: #212121;
+}
+#periodic-table .green {
+    background: #008000 none;
+    color: #212121;
+}
+#periodic-table .greenyellow {
+    background: #adff2f none;
+    color: #212121;
+}
+#periodic-table .grey {
+    background: #808080 none;
+    color: #212121;
+}
+#periodic-table .honeydew {
+    background: #f0fff0 none;
+    color: #212121;
+}
+#periodic-table .hotpink {
+    background: #ff69b4 none;
+    color: #212121;
+}
+#periodic-table .indianred {
+    background: #cd5c5c none;
+    color: #212121;
+}
+#periodic-table .indigo {
+    background: #4b0082 none;
+    color: #212121;
+}
+#periodic-table .ivory {
+    background: #fffff0 none;
+    color: #212121;
+}
+#periodic-table .khaki {
+    background: #f0e68c none;
+    color: #212121;
+}
+#periodic-table .lavender {
+    background: #e6e6fa none;
+    color: #212121;
+}
+#periodic-table .lavenderblush {
+    background: #fff0f5 none;
+    color: #212121;
+}
+#periodic-table .lawngreen {
+    background: #7cfc00 none;
+    color: #212121;
+}
+#periodic-table .lemonchiffon {
+    background: #fffacd none;
+    color: #212121;
+}
+#periodic-table .lightblue {
+    background: #add8e6 none;
+    color: #212121;
+}
+#periodic-table .lightcoral {
+    background: #f08080 none;
+    color: #212121;
+}
+#periodic-table .lightcyan {
+    background: #e0ffff none;
+    color: #212121;
+}
+#periodic-table .lightgoldenrodyellow {
+    background: #fafad2 none;
+    color: #212121;
+}
+#periodic-table .lightgray {
+    background: #d3d3d3 none;
+    color: #212121;
+}
+#periodic-table .lightgreen {
+    background: #90ee90 none;
+    color: #212121;
+}
+#periodic-table .lightgrey {
+    background: #d3d3d3 none;
+    color: #212121;
+}
+#periodic-table .lightpink {
+    background: #ffb6c1 none;
+    color: #212121;
+}
+#periodic-table .lightsalmon {
+    background: #ffa07a none;
+    color: #212121;
+}
+#periodic-table .lightseagreen {
+    background: #20b2aa none;
+    color: #212121;
+}
+#periodic-table .lightskyblue {
+    background: #87cefa none;
+    color: #212121;
+}
+#periodic-table .lightslategray {
+    background: #778899 none;
+    color: #212121;
+}
+#periodic-table .lightslategrey {
+    background: #778899 none;
+    color: #212121;
+}
+#periodic-table .lightsteelblue {
+    background: #b0c4de none;
+    color: #212121;
+}
+#periodic-table .lightyellow {
+    background: #ffffe0 none;
+    color: #212121;
+}
+#periodic-table .lime {
+    background: #00ff00 none;
+    color: #212121;
+}
+#periodic-table .limegreen {
+    background: #32cd32 none;
+    color: #212121;
+}
+#periodic-table .linen {
+    background: #faf0e6 none;
+    color: #212121;
+}
+#periodic-table .magenta {
+    background: #ff00ff none;
+    color: #212121;
+}
+#periodic-table .maroon {
+    background: #800000 none;
+    color: #212121;
+}
+#periodic-table .mediumaquamarine {
+    background: #66cdaa none;
+    color: #212121;
+}
+#periodic-table .mediumblue {
+    background: #0000cd none;
+    color: #212121;
+}
+#periodic-table .mediumorchid {
+    background: #ba55d3 none;
+    color: #212121;
+}
+#periodic-table .mediumpurple {
+    background: #9370db none;
+    color: #212121;
+}
+#periodic-table .mediumseagreen {
+    background: #3cb371 none;
+    color: #212121;
+}
+#periodic-table .mediumslateblue {
+    background: #7b68ee none;
+    color: #212121;
+}
+#periodic-table .mediumspringgreen {
+    background: #00fa9a none;
+    color: #212121;
+}
+#periodic-table .mediumturquoise {
+    background: #48d1cc none;
+    color: #212121;
+}
+#periodic-table .mediumvioletred {
+    background: #c71585 none;
+    color: #212121;
+}
+#periodic-table .midnightblue {
+    background: #191970 none;
+    color: #212121;
+}
+#periodic-table .mintcream {
+    background: #f5fffa none;
+    color: #212121;
+}
+#periodic-table .mistyrose {
+    background: #ffe4e1 none;
+    color: #212121;
+}
+#periodic-table .moccasin {
+    background: #ffe4b5 none;
+    color: #212121;
+}
+#periodic-table .navajowhite {
+    background: #ffdead none;
+    color: #212121;
+}
+#periodic-table .navy {
+    background: #000080 none;
+    color: #212121;
+}
+#periodic-table .oldlace {
+    background: #fdf5e6 none;
+    color: #212121;
+}
+#periodic-table .olive {
+    background: #808000 none;
+    color: #212121;
+}
+#periodic-table .olivedrab {
+    background: #6b8e23 none;
+    color: #212121;
+}
+#periodic-table .orange {
+    background: #ffa500 none;
+    color: #212121;
+}
+#periodic-table .orangered {
+    background: #ff4500 none;
+    color: #212121;
+}
+#periodic-table .orchid {
+    background: #da70d6 none;
+    color: #212121;
+}
+#periodic-table .palegoldenrod {
+    background: #eee8aa none;
+    color: #212121;
+}
+#periodic-table .palegreen {
+    background: #98fb98 none;
+    color: #212121;
+}
+#periodic-table .paleturquoise {
+    background: #afeeee none;
+    color: #212121;
+}
+#periodic-table .palevioletred {
+    background: #db7093 none;
+    color: #212121;
+}
+#periodic-table .papayawhip {
+    background: #ffefd5 none;
+    color: #212121;
+}
+#periodic-table .peachpuff {
+    background: #ffdab9 none;
+    color: #212121;
+}
+#periodic-table .peru {
+    background: #cd853f none;
+    color: #212121;
+}
+#periodic-table .pink {
+    background: #ffc0cb none;
+    color: #212121;
+}
+#periodic-table .plum {
+    background: #dda0dd none;
+    color: #212121;
+}
+#periodic-table .powderblue {
+    background: #b0e0e6 none;
+    color: #212121;
+}
+#periodic-table .purple {
+    background: #800080 none;
+    color: #212121;
+}
+#periodic-table .red {
+    background: #ff0000 none;
+    color: #212121;
+}
+#periodic-table .rosybrown {
+    background: #bc8f8f none;
+    color: #212121;
+}
+#periodic-table .royalblue {
+    background: #4169e1 none;
+    color: #212121;
+}
+#periodic-table .saddlebrown {
+    background: #8b4513 none;
+    color: #212121;
+}
+#periodic-table .salmon {
+    background: #fa8072 none;
+    color: #212121;
+}
+#periodic-table .sandybrown {
+    background: #f4a460 none;
+    color: #212121;
+}
+#periodic-table .seagreen {
+    background: #2e8b57 none;
+    color: #212121;
+}
+#periodic-table .seashell {
+    background: #fff5ee none;
+    color: #212121;
+}
+#periodic-table .sienna {
+    background: #a0522d none;
+    color: #212121;
+}
+#periodic-table .silver {
+    background: #C0C0C0 none;
+    color: #212121;
+}
+#periodic-table .silver {
+    background: #c0c0c0 none;
+    color: #212121;
+}
+#periodic-table .skyblue {
+    background: #87ceeb none;
+    color: #212121;
+}
+#periodic-table .slateblue {
+    background: #6a5acd none;
+    color: #212121;
+}
+#periodic-table .slategray {
+    background: #708090 none;
+    color: #212121;
+}
+#periodic-table .slategrey {
+    background: #708090 none;
+    color: #212121;
+}
+#periodic-table .snow {
+    background: #fffafa none;
+    color: #212121;
+}
+#periodic-table .springgreen {
+    background: #00ff7f none;
+    color: #212121;
+}
+#periodic-table .steelblue {
+    background: #4682b4 none;
+    color: #212121;
+}
+#periodic-table .tan {
+    background: #d2b48c none;
+    color: #212121;
+}
+#periodic-table .teal {
+    background: #008080 none;
+    color: #212121;
+}
+#periodic-table .thistle {
+    background: #d8bfd8 none;
+    color: #212121;
+}
+#periodic-table .tomato {
+    background: #ff6347 none;
+    color: #212121;
+}
+#periodic-table .turquoise {
+    background: #40e0d0 none;
+    color: #212121;
+}
+#periodic-table .violet {
+    background: #ee82ee none;
+    color: #212121;
+}
+#periodic-table .wheat {
+    background: #f5deb3 none;
+    color: #212121;
+}
+#periodic-table .white {
+    background: #ffffff none;
+    color: #212121;
+}
+#periodic-table .whitesmoke {
+    background: #f5f5f5 none;
+    color: #212121;
+}
+#periodic-table .yellow {
+    background: #ffff00 none;
+    color: #212121;
+}
+#periodic-table .yellowgreen {
+    background: #9acd32 none;
+    color: #212121;
+}
+
+/* Colors for different categories of elements */
+/** OLD REMOVE
+#periodic-table .alkali-metal {}
+#periodic-table .alkaline-earth-metal {}
+#periodic-table .transition-metal {}
+#periodic-table .post-transition-metal {}
+#periodic-table .metalloid {}
+#periodic-table .polyatomic-nonmetal {}
+#periodic-table .diatomic-nonmetal {}
+#periodic-table .noble-gas {}
+#periodic-table .actinide {}
+#periodic-table .lanthanide {}**/
