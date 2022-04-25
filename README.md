@@ -18,12 +18,6 @@ see "Configuring Multiple Instances in Raneto" at https://collection.code.blog/2
 
 Combine with a Periodic Table for each Main Category (e.g. Architecture, DevOps, Programming), for example with https://github.com/PeterBeard/periodic-videos as demonstrated at http://www.periodicvideos.com/index.htm
 
-For styling of the Periodic Table have a look at https://codepen.io/mikegolus/pen/OwrPgB
-
-The categories of Information Technology have been based "Information Technology" at https://simplicable.com/new/information-technology
-
-Breadcrumbs based on "Refactoring UI - Breadcrumbs" at https://codepen.io/dp_lewis/pen/MWYgbOY
-
 ![Combine Periodic Table with Raneto](https://user-images.githubusercontent.com/1499433/162425764-d69e29dd-dc1f-47ad-87e7-b7c830a3fc71.png)
 
 Based on "Periodic Table for DevOps" at https://digital.ai/periodic-table-of-devops-tools
@@ -35,6 +29,8 @@ For creating the Periodic Table look at [Peter Beard's Periodic Videos](https://
 For styling of the Periodic Table have a look at https://codepen.io/mikegolus/pen/OwrPgB
 
 The categories of Information Technology have been based "Information Technology" at https://simplicable.com/new/information-technology
+
+Breadcrumbs based on "Refactoring UI - Breadcrumbs" at https://codepen.io/dp_lewis/pen/MWYgbOY
 
 ## 100 - Introduction
 
