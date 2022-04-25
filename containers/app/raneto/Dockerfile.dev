@@ -33,18 +33,24 @@ RUN cd /tmp \
     && rm "$RANETO_VERSION.tar.gz"
 
 # Installing dependencies
-RUN npm install --global gulp-cli pm2
+RUN npm install --global gulp-cli pm2 path
 
 # Entering into the Raneto directory
 WORKDIR $RANETO_INSTALL_DIR
 
+# Copy all
+COPY . $RANETO_INSTALL_DIR
+
+# Add our own implementation of multiple-instances.js
+ADD example $RANETO_INSTALL_DIR/example
+
 # Installing Raneto
 RUN npm install \
-    && rm -f $RANETO_INSTALL_DIR/example/config.default.js \
+    && rm -f $RANETO_INSTALL_DIR/example/config.custom.js \
     && gulp
 
 # Exposed the raneto default port 3000
 EXPOSE 3000
 
-# Starting the raneto
-CMD [ "pm2", "start", "/opt/raneto/example/server.js", "--name", "raneto", "--no-daemon" ]
+# Starting the raneto, referencing our own "custom' directory"
+CMD [ "pm2", "start", "/opt/raneto/example/multiple-instances.js", "--name", "raneto", "--no-daemon" ]
