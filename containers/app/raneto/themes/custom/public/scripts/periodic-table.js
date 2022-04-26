@@ -47,7 +47,8 @@ function load_elements() {
           console.log("Elements = ", elements); // For testing only
       }).then(function() {
         $.each(elements, function(k, v) {
-          var cell = $('#' + v.symbol.toLowerCase());
+          //var cell = $('#' + v.symbol.toLowerCase());
+          var cell = $('#' + v.number);
           cell.mouseover(function() {
             show_element_details(k, v);
           });
